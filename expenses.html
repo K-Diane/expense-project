@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expenses Tracker</title>
+    <!-- linking file to css-->
+
+    <link rel="stylesheet" href="expenses.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Expenses Tracker</h2>
+
+      <!-- Input fields to add expense . with option of inputting expenses, adding the amount and also a button to add on click -->
+
+      <div class="input-group">
+        <input type="text" id="Description" placeholder="Description" />
+        <input type="number" id="amount" placeholder="amount" />
+        <button onClick="addExpense()">Add Expense</button>
+      </div>
+
+      <!-- table that will hold the expesnes list-->
+
+      <table>
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <!-- all expenses will be added on the body-->
+        <tbody id="expenseList"></tbody>
+      </table>
+    </div>
+    <!-- linking file to js-->
+    <script src="expenses.js"></script>
+  </body>
+</html>

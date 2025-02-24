@@ -1,0 +1,66 @@
+/* Styling the main container */
+.container {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba;
+}
+
+h2 {
+  text-align: center;
+  color: black;
+}
+
+/* Input and button container */
+.input-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Input fields styling */
+input {
+  flex: 1;
+  padding: 15px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Button styling */
+button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+/* Add button specific styling */
+button {
+  background-color: greenyellow;
+  color: black;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+/* Table headers */
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Delete button styling */
+td button {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
