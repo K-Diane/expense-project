@@ -37,11 +37,20 @@ function renderExpenses() {
   const list = document.getElementById("expenseList");
   list.innerHTML = "";
 
+  // let the total amount start as 0 so we have the amount at the end of table
+
+  let total = 0;
+
   // look into the expense array and create a table rows
 
   expenses.forEach((expense) => {
-    // Create a new table row
+    // adding all expenses or each expenses to the total
+    total += expense.amount;
+
+    // Create a new table row and with the total amount
     const row = document.createElement("tr");
+
+    const totalAmount = document.getElementById("totalAmount");
 
     // input the row with expense data needed with also abutton to delete using an Id
     row.innerHTML = `
@@ -52,6 +61,9 @@ function renderExpenses() {
     `;
     // Append the row to the table or list
     list.appendChild(row);
+
+    // Update the total expense display
+    totalAmount.textContent = total.toFixed(2);
   });
 }
 
