@@ -1,3 +1,5 @@
+console.log("loading!");
+
 // starting expenses as an empty array
 
 let expenses = [];
@@ -16,6 +18,8 @@ function addExpense() {
 
     const id = expenses.length + 1;
     expenses.push({ id, description, amount: parseFloat(amount) });
+
+    console.log("Updated Expenses:", expenses);
 
     renderExpenses();
 
@@ -46,7 +50,20 @@ function renderExpenses() {
         
         <td><button onclick="deleteExpense(${expense.id})">Delete</button></td>
     `;
-    // Append the row to the table
+    // Append the row to the table or list
     list.appendChild(row);
   });
 }
+
+// function that will delete an expense from the list . it will use an Id .
+// will use Filter to move out the specific expense with an Id and keep the the original list unchanged
+
+function deleteExpense(id) {
+  expenses = expenses.filter((expense) => expense.id !== id);
+
+  // Update the list after deleting
+  renderExpenses();
+}
+
+//  render expenses when the page loads
+document.addEventListener("DOMContentLoaded", renderExpenses);
